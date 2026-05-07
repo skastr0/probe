@@ -1,4 +1,4 @@
-# Probe CLI
+# Probe
 
 Probe is a daemon-first, agent-first iOS runtime controller for macOS. It provides reliable, token-efficient control of running iOS apps on Simulator or real device through a local daemon and thin CLI client.
 
@@ -42,7 +42,7 @@ CLI commands  -->  Unix socket  -->  Daemon  -->  XCUITest Runner  -->  Target A
 ## Quick Start
 
 ```bash
-cd /path/to/probe-cli
+cd /path/to/probe
 
 # Check environment readiness
 probe doctor --output-json
@@ -139,7 +139,7 @@ bun run probe -- session open --output-json
 
 Use `--output-json` for machine output. Bare `--json` remains an output-only compatibility alias for older scripts; it is no longer accepted as an inline payload flag. Use `--input-json <payload>`, `--file <payload.json>`, or `--stdin` for domain JSON payloads.
 
-Compatibility policy: human-friendly domain flags remain supported until Probe reaches `0.2.0` and the product validation script has switched to schema-discovered JSON payloads. Owner: Probe CLI maintainer. Retirement trigger: `schema list --output-json` covers the command and README examples show the JSON payload path for that command.
+Compatibility policy: human-friendly domain flags remain supported until Probe reaches `0.2.0` and the product validation script has switched to schema-discovered JSON payloads. Owner: Probe maintainer. Retirement trigger: `schema list --output-json` covers the command and README examples show the JSON payload path for that command.
 
 Generated-script entry points:
 ```bash

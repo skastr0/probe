@@ -59,7 +59,7 @@ const assertPackagedProbePathExists = async (path: string, description: string):
   throw new EnvironmentError({
     code: "probe-package-artifact-missing",
     reason: `Probe could not find the packaged ${description} at ${path}.`,
-    nextStep: "Reinstall probe-cli so the packaged ios/ runner sources are restored, then retry the session open.",
+    nextStep: "Reinstall probe so the packaged ios/ runner sources are restored, then retry the session open.",
     details: [],
   })
 }

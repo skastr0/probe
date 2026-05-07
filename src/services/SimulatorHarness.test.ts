@@ -204,10 +204,10 @@ describe("SimulatorHarness helpers", () => {
 
     await buildProbeRunnerForSimulator(
       {
-        projectPath: "/tmp/probe-cli/ios/ProbeFixture/ProbeFixture.xcodeproj",
+        projectPath: "/tmp/probe/ios/ProbeFixture/ProbeFixture.xcodeproj",
         simulatorUdid,
-        derivedDataPath: "/tmp/probe-cli/.probe/simulator-runner-builds/SIM-123/derived-data",
-        buildLogPath: "/tmp/probe-cli/logs/build-for-testing.log",
+        derivedDataPath: "/tmp/probe/.probe/simulator-runner-builds/SIM-123/derived-data",
+        buildLogPath: "/tmp/probe/logs/build-for-testing.log",
       },
       {
         runCommand: async (args) => {
@@ -225,17 +225,17 @@ describe("SimulatorHarness helpers", () => {
         command: "xcodebuild",
         commandArgs: [
           "-project",
-          "/tmp/probe-cli/ios/ProbeFixture/ProbeFixture.xcodeproj",
+          "/tmp/probe/ios/ProbeFixture/ProbeFixture.xcodeproj",
           "-scheme",
           "ProbeRunner",
           "-destination",
           `platform=iOS Simulator,id=${simulatorUdid}`,
           "-derivedDataPath",
-          "/tmp/probe-cli/.probe/simulator-runner-builds/SIM-123/derived-data",
+          "/tmp/probe/.probe/simulator-runner-builds/SIM-123/derived-data",
           "CODE_SIGNING_ALLOWED=NO",
           "build-for-testing",
         ],
-        logPath: "/tmp/probe-cli/logs/build-for-testing.log",
+        logPath: "/tmp/probe/logs/build-for-testing.log",
       },
     ])
   })

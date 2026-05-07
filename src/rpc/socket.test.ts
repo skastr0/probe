@@ -12,7 +12,7 @@ import { serveRpc } from "./server"
 const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms))
 
 const withTempSocketRoot = async <T>(run: (paths: { socketPath: string; metadataPath: string }) => Promise<T>) => {
-  const root = await mkdtemp(join(tmpdir(), "probe-cli-rpc-"))
+  const root = await mkdtemp(join(tmpdir(), "probe-rpc-"))
 
   try {
     return await run({

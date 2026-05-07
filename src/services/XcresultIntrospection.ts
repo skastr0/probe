@@ -492,7 +492,7 @@ const exportAttachments = async (args: {
   readonly bundlePath: string
   readonly runCommand: (command: string, commandArgs: ReadonlyArray<string>) => Promise<HostCommandResult>
 }): Promise<ReadonlyArray<XcresultAttachmentRecord>> => {
-  const exportDirectory = await mkdtemp(join(tmpdir(), "probe-cli-xcresult-attachments-"))
+  const exportDirectory = await mkdtemp(join(tmpdir(), "probe-xcresult-attachments-"))
 
   try {
     const command = "/usr/bin/xcrun"
@@ -528,7 +528,7 @@ const exportAttachmentsWithLease = async <T>(args: {
   readonly runCommand: (command: string, commandArgs: ReadonlyArray<string>) => Promise<HostCommandResult>
   readonly use: (attachments: ReadonlyArray<XcresultAttachmentRecord>) => Promise<T>
 }): Promise<T> => {
-  const exportDirectory = await mkdtemp(join(tmpdir(), "probe-cli-xcresult-attachments-"))
+  const exportDirectory = await mkdtemp(join(tmpdir(), "probe-xcresult-attachments-"))
 
   try {
     const command = "/usr/bin/xcrun"

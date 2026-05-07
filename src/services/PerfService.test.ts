@@ -259,7 +259,7 @@ const buildGenericPerfExportXml = (schema: string) => `<?xml version="1.0"?>
 </trace-query-result>`
 
 const withTempRoot = async <T>(run: (root: string) => Promise<T>) => {
-  const root = await mkdtemp(join(tmpdir(), "probe-cli-perf-service-"))
+  const root = await mkdtemp(join(tmpdir(), "probe-perf-service-"))
 
   try {
     return await run(root)

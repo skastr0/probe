@@ -1,7 +1,7 @@
 {
   "capturedAt": "2026-04-10T17:33:29.753Z",
   "host": {
-    "cwd": "/Users/guilhermecastro/Projects/probe-cli",
+    "cwd": "/Users/guilhermecastro/Projects/probe",
     "platform": "darwin",
     "arch": "arm64"
   },
@@ -15,10 +15,10 @@
       "initFilesSkipped": true,
       "asyncMode": false
     },
-    "compileCommand": "xcrun clang -g -O0 -fno-omit-frame-pointer /Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c -o /var/folders/n8/cfckz4jx07j7yx95w091vtnr0000gn/T/probe-lldb-bridge-MXwrQQ/probe-lldb-target",
+    "compileCommand": "xcrun clang -g -O0 -fno-omit-frame-pointer /Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c -o /var/folders/n8/cfckz4jx07j7yx95w091vtnr0000gn/T/probe-lldb-bridge-MXwrQQ/probe-lldb-target",
     "compileStdout": "",
     "compileStderr": "",
-    "codesignCommand": "codesign --force --sign - --entitlements /Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/debuggee-entitlements.plist /var/folders/n8/cfckz4jx07j7yx95w091vtnr0000gn/T/probe-lldb-bridge-MXwrQQ/probe-lldb-target",
+    "codesignCommand": "codesign --force --sign - --entitlements /Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/debuggee-entitlements.plist /var/folders/n8/cfckz4jx07j7yx95w091vtnr0000gn/T/probe-lldb-bridge-MXwrQQ/probe-lldb-target",
     "codesignStdout": "",
     "codesignStderr": "/var/folders/n8/cfckz4jx07j7yx95w091vtnr0000gn/T/probe-lldb-bridge-MXwrQQ/probe-lldb-target: replacing existing signature\n",
     "debuggeeEntitlements": "Executable=/private/var/folders/n8/cfckz4jx07j7yx95w091vtnr0000gn/T/probe-lldb-bridge-MXwrQQ/probe-lldb-target\nwarning: Specifying ':' in the path is deprecated and will not work in a future release\n",
@@ -100,7 +100,7 @@
                   "displayFunction": "probe_bridge_leaf_wait",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 20,
                     "column": 5
                   },
@@ -115,7 +115,7 @@
                   "displayFunction": "probe_bridge_middle_frame",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 30,
                     "column": 10
                   },
@@ -130,7 +130,7 @@
                   "displayFunction": "main",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 43,
                     "column": 10
                   },
@@ -209,7 +209,7 @@
               "displayFunction": "probe_bridge_leaf_wait",
               "module": "probe-lldb-target",
               "lineEntry": {
-                "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                 "line": 20,
                 "column": 5
               },
@@ -224,7 +224,7 @@
               "displayFunction": "probe_bridge_middle_frame",
               "module": "probe-lldb-target",
               "lineEntry": {
-                "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                 "line": 30,
                 "column": 10
               },
@@ -239,7 +239,7 @@
               "displayFunction": "main",
               "module": "probe-lldb-target",
               "lineEntry": {
-                "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                 "line": 43,
                 "column": 10
               },
@@ -286,7 +286,7 @@
           "displayFunction": "probe_bridge_leaf_wait",
           "module": "probe-lldb-target",
           "lineEntry": {
-            "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+            "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
             "line": 20,
             "column": 5
           },
@@ -400,7 +400,7 @@
           "displayFunction": "probe_bridge_leaf_wait",
           "module": "probe-lldb-target",
           "lineEntry": {
-            "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+            "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
             "line": 20,
             "column": 5
           },
@@ -481,7 +481,7 @@
               "displayFunction": "probe_bridge_leaf_wait",
               "module": "probe-lldb-target",
               "lineEntry": {
-                "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                 "line": 20,
                 "column": 5
               },
@@ -496,7 +496,7 @@
               "displayFunction": "probe_bridge_middle_frame",
               "module": "probe-lldb-target",
               "lineEntry": {
-                "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                 "line": 30,
                 "column": 10
               },
@@ -511,7 +511,7 @@
               "displayFunction": "main",
               "module": "probe-lldb-target",
               "lineEntry": {
-                "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                 "line": 43,
                 "column": 10
               },
@@ -592,7 +592,7 @@
                   "displayFunction": "probe_bridge_leaf_wait",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 20,
                     "column": 5
                   },
@@ -607,7 +607,7 @@
                   "displayFunction": "probe_bridge_middle_frame",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 30,
                     "column": 10
                   },
@@ -622,7 +622,7 @@
                   "displayFunction": "main",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 43,
                     "column": 10
                   },
@@ -705,7 +705,7 @@
                   "displayFunction": "probe_bridge_leaf_wait",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 20,
                     "column": 5
                   },
@@ -720,7 +720,7 @@
                   "displayFunction": "probe_bridge_middle_frame",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 30,
                     "column": 10
                   },
@@ -735,7 +735,7 @@
                   "displayFunction": "main",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 43,
                     "column": 10
                   },
@@ -865,7 +865,7 @@
                   "displayFunction": "probe_bridge_leaf_wait",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 20,
                     "column": 5
                   },
@@ -880,7 +880,7 @@
                   "displayFunction": "probe_bridge_middle_frame",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 30,
                     "column": 10
                   },
@@ -895,7 +895,7 @@
                   "displayFunction": "main",
                   "module": "probe-lldb-target",
                   "lineEntry": {
-                    "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                    "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                     "line": 43,
                     "column": 10
                   },
@@ -973,7 +973,7 @@
               "displayFunction": "probe_bridge_leaf_wait",
               "module": "probe-lldb-target",
               "lineEntry": {
-                "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                 "line": 20,
                 "column": 5
               },
@@ -988,7 +988,7 @@
               "displayFunction": "probe_bridge_middle_frame",
               "module": "probe-lldb-target",
               "lineEntry": {
-                "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                 "line": 30,
                 "column": 10
               },
@@ -1003,7 +1003,7 @@
               "displayFunction": "main",
               "module": "probe-lldb-target",
               "lineEntry": {
-                "file": "/Users/guilhermecastro/Projects/probe-cli/src/spikes/lldb-python-bridge/target.c",
+                "file": "/Users/guilhermecastro/Projects/probe/src/spikes/lldb-python-bridge/target.c",
                 "line": 43,
                 "column": 10
               },

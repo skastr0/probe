@@ -28,19 +28,19 @@ const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve,
 const openParams = {
   bundleId: "dev.probe.fixture",
   simulatorUdid: null,
-  projectRoot: "/tmp/probe-cli-test",
+  projectRoot: "/tmp/probe-test",
   emitProgress: () => undefined,
 } as const
 
 const deviceOpenParams = {
   bundleId: "dev.probe.fixture",
   deviceId: null,
-  projectRoot: "/tmp/probe-cli-test",
+  projectRoot: "/tmp/probe-test",
   emitProgress: () => undefined,
 } as const
 
 const withTempRoot = async <T>(run: (root: string) => Promise<T>) => {
-  const root = await mkdtemp(join(tmpdir(), "probe-cli-session-registry-"))
+  const root = await mkdtemp(join(tmpdir(), "probe-session-registry-"))
 
   try {
     return await run(root)

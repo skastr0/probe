@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "probe-cli",
+      "name": "@skastr0/probe",
       "dependencies": {
         "effect": "^3.21.0",
       },

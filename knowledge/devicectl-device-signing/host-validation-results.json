@@ -3,7 +3,7 @@
   "overallOutcome": "partial",
   "summary": "Host-side real-device prerequisites are partially validated: devicectl is present, iOS DDI metadata is usable, and the Probe runner compiles for iPhoneOS without signing, but deployment remains blocked by missing signing configuration and the lack of a connected physical device.",
   "host": {
-    "workspaceRoot": "/Users/guilhermecastro/Projects/probe-cli",
+    "workspaceRoot": "/Users/guilhermecastro/Projects/probe",
     "spikeRoot": "/tmp/probe-real-device-spike.xmweKz",
     "developerDir": "/Applications/Xcode.app/Contents/Developer",
     "xcodeVersionLines": [
@@ -18,7 +18,7 @@
       "xctestrunPath": null,
       "evidence": [
         "Command line invocation:",
-        "    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project /Users/guilhermecastro/Projects/probe-cli/ios/ProbeFixture/ProbeFixture.xcodeproj -scheme ProbeRunner -destination generic/platform=iOS -derivedDataPath /tmp/probe-real-device-spike.xmweKz/derived-data-device-signed build-for-testing",
+        "    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project /Users/guilhermecastro/Projects/probe/ios/ProbeFixture/ProbeFixture.xcodeproj -scheme ProbeRunner -destination generic/platform=iOS -derivedDataPath /tmp/probe-real-device-spike.xmweKz/derived-data-device-signed build-for-testing",
         "ComputePackagePrebuildTargetDependencyGraph",
         "Prepare packages",
         "CreateBuildRequest",
@@ -30,7 +30,7 @@
         "    Target 'ProbeRunnerUITests' in project 'ProbeFixture'",
         "        \u279c Explicit dependency on target 'ProbeFixture' in project 'ProbeFixture'"
       ],
-      "keyFailure": "/Users/guilhermecastro/Projects/probe-cli/ios/ProbeFixture/ProbeFixture.xcodeproj: error: Signing for \"ProbeRunnerUITests\" requires a development team. Select a development team in the Signing & Capabilities editor. (in target 'ProbeRunnerUITests' from project 'ProbeFixture')",
+      "keyFailure": "/Users/guilhermecastro/Projects/probe/ios/ProbeFixture/ProbeFixture.xcodeproj: error: Signing for \"ProbeRunnerUITests\" requires a development team. Select a development team in the Signing & Capabilities editor. (in target 'ProbeRunnerUITests' from project 'ProbeFixture')",
       "logPath": "/tmp/probe-real-device-spike.xmweKz/logs/build-for-testing-device-signed.log"
     },
     "unsignedBuild": {

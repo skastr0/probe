@@ -53,7 +53,7 @@ const shouldCopyIosPath = (source: string): boolean => {
 
 const writeProductionPackageJson = () => {
   const productionPackageJson = {
-    name: packageJson.name ?? "probe-cli",
+    name: packageJson.name ?? "probe",
     version: packageJson.version ?? "0.0.0",
     private: true,
     type: packageJson.type ?? "module",

@@ -1056,7 +1056,7 @@ describe("cli user input handling", () => {
       runCapabilitiesCommand(["--output-json"]).pipe(
         Effect.provideService(ProbeKernel, ProbeKernel.of({
           getWorkspaceStatus: () => Effect.succeed({
-            workspaceRoot: "/tmp/probe-cli",
+            workspaceRoot: "/tmp/probe",
             artifactRoot: "/tmp/.probe",
             outputThreshold: {
               maxInlineBytes: 8192,
@@ -1145,7 +1145,7 @@ describe("cli user input handling", () => {
 
   test("session run dispatches flow contracts from files", async () => {
     const captured = { current: null as CapturedFlowParams | null }
-    const root = await mkdtemp(join(tmpdir(), "probe-cli-flow-"))
+    const root = await mkdtemp(join(tmpdir(), "probe-flow-"))
     const flowPath = join(root, "flow.json")
 
     try {
@@ -1189,7 +1189,7 @@ describe("cli user input handling", () => {
 
   test("session run dispatches v2 flow contracts from files", async () => {
     const captured = { current: null as CapturedFlowParams | null }
-    const root = await mkdtemp(join(tmpdir(), "probe-cli-flow-v2-"))
+    const root = await mkdtemp(join(tmpdir(), "probe-flow-v2-"))
     const flowPath = join(root, "flow-v2.json")
 
     try {
@@ -1511,7 +1511,7 @@ describe("cli user input handling", () => {
 
   test("perf around dispatches bounded flow profiling requests from files", async () => {
     const captured = { current: null as CapturedPerfAroundParams | null }
-    const root = await mkdtemp(join(tmpdir(), "probe-cli-perf-around-"))
+    const root = await mkdtemp(join(tmpdir(), "probe-perf-around-"))
     const flowPath = join(root, "flow.json")
 
     try {
