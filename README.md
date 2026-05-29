@@ -4,6 +4,12 @@ Probe is a daemon-first, agent-first iOS runtime controller for macOS. It provid
 
 Probe does not own builds, signing, or provisioning of the target app. The app must already be built and installed (except for Probe's own fixture app on Simulator, which it builds automatically).
 
+## Status
+
+Probe is public and experimental. It is useful for local iOS validation workflows, but command contracts, fixture behavior, and release packaging may change before the first stable release.
+
+The current supported distribution lane is source checkout plus local Bun install. npm publishing, standalone GitHub Release binaries, and Homebrew distribution are intentionally deferred until the runtime package layout, binary artifact shape, and release authority are validated.
+
 ## Product Vision
 
 Probe is becoming **the local iOS validation and observability workbench for agents and power users**:
@@ -39,11 +45,22 @@ CLI commands  -->  Unix socket  -->  Daemon  -->  XCUITest Runner  -->  Target A
 - `ffmpeg` (optional, for stitching video frames into MP4)
 - For real devices: paired device with Developer Mode enabled, signed app installed
 
+## Install From Source
+
+```bash
+git clone https://github.com/skastr0/probe.git
+cd probe
+bun install --frozen-lockfile
+bun run verify
+bun run build
+bun run install:local
+```
+
+`bun run install:local` installs a `probe` shim into `${INSTALL_DIR:-$HOME/.local/bin}` and copies the runtime package tree into `${PROBE_INSTALL_ROOT:-$HOME/.probe/install}`.
+
 ## Quick Start
 
 ```bash
-cd /path/to/probe
-
 # Check environment readiness
 probe doctor --output-json
 
@@ -67,6 +84,18 @@ When running from the source repo, prefix commands with `bun run probe --`:
 bun run probe -- serve
 bun run probe -- session open --output-json
 ```
+
+## Release Plan
+
+The prepared release lane is:
+
+1. Keep the repository public as an experimental source-available CLI.
+2. Validate every release candidate with `bun install --frozen-lockfile`, `bun run verify`, public-readiness scans, and package/release audits.
+3. Create a git tag and GitHub Release only after maintainer approval.
+4. Add standalone binary artifacts and Homebrew only after `scripts/build.ts` produces a stable release asset shape.
+5. Consider npm only after Probe has a versioned package contract with a `bin` entry, a safe `files` allowlist, and registry authority configured.
+
+Real publishing, tags, GitHub Releases, Homebrew formula pushes, npm setup, and registry uploads require explicit maintainer approval. `release.md` is ignored because it is temporary coordination scratch space, not a release artifact.
 
 ## Command Surface
 

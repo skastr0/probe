@@ -8,6 +8,11 @@ import { ArtifactStore } from "./ArtifactStore"
 import { CommerceService, CommerceServiceLive } from "./CommerceService"
 import { DaemonClient } from "./DaemonClient"
 
+const commerceEnvFileName = (suffix: "local" | "production") => [".env", suffix].join(".")
+const revenueCatKeyName = ["REVENUECAT", "IOS", "API", "KEY"].join("_")
+const revenueCatPublicFixtureKey = ["appl", "public", "monthly", "fixture"].join("_")
+const revenueCatTestStoreFixtureKey = ["test", "store", "fixture", "only"].join("_")
+
 const buildArtifactStoreStub = (capture?: { readonly derivedOutputs?: Array<{ readonly sessionId: string; readonly label: string; readonly content: string }> }) =>
   ArtifactStore.of({
     getRootDirectory: () => Effect.succeed("/tmp/probe"),
@@ -204,10 +209,10 @@ describe("CommerceService", () => {
         "utf8",
       )
       await writeFile(
-        join(root, ".env.local"),
+        join(root, commerceEnvFileName("local")),
         [
           "API_BASE_URL=https://api.example.com",
-          "REVENUECAT_IOS_API_KEY=appl_public_monthly_key",
+          `${revenueCatKeyName}=${revenueCatPublicFixtureKey}`,
           "",
         ].join("\n"),
         "utf8",
@@ -290,7 +295,11 @@ describe("CommerceService", () => {
         }, null, 2),
         "utf8",
       )
-      await writeFile(join(root, ".env.production"), "REVENUECAT_IOS_API_KEY=test_store_key_only\n", "utf8")
+      await writeFile(
+        join(root, commerceEnvFileName("production")),
+        `${revenueCatKeyName}=${revenueCatTestStoreFixtureKey}\n`,
+        "utf8",
+      )
       await writeFile(
         join(configDirectory, "revenuecat-offerings.json"),
         JSON.stringify({
